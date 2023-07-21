@@ -14,9 +14,23 @@
     --second-bg-color: #e9e9e9;
     --text-color: #191919;
     --main-color: rgb(24, 179, 190);
-    --title-font-size: 5.6rem;
-    --subtitle-font-size: 3.5rem;
-    --text-font-size: 1.6rem;
+}
+
+h1{
+    font-size: 5.6rem;
+}
+
+h2{
+    font-size: 3.5rem;
+}
+
+h3{
+    font-size: 2.5rem;
+}
+
+p , a{
+    font-size: 1.6rem;
+    color: var(--text-color);
 }
 
 html{
@@ -31,32 +45,14 @@ body{
     overflow-x: hidden;
 }
 
-h1{
-    font-size: var(--title-font-size);
-    font-weight: 700;
-}
-
-h2{
-    font-size: var(--subtitle-font-size);
-    font-weight: 700;
-}
-
-h3{
-    font-size: 2.5rem;
-}
-
-p{
-    font-size: var(--text-font-size);
-}
-
-.header{
+.header{                                     /*navbar*/
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     padding: 2rem 15%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     z-index: 10;
     background-color: var(--second-bg-color);
@@ -66,6 +62,7 @@ p{
     color: var(--text-color);
     font-size: 2.5rem;
     font-weight: 700;
+    display: none;
 }
 
 .navbar a{
@@ -94,9 +91,6 @@ p{
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background-image: url(assets/images/bg.png);
-    background-size: cover;
-    background-position: top;   
 }
 
 .home-content{
@@ -120,7 +114,6 @@ p{
 
 .home-content p{
     width: 80%;
-    font-size: var(--text-font-size);
     text-align: center;
     margin: 2rem 0rem;
 }
@@ -162,6 +155,7 @@ p{
     width: 170px;
     display: flex;
     justify-content: space-between;
+    display: none;
 }
 
 .home-social a{
@@ -188,7 +182,7 @@ p{
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
+    min-height: 90vh;
 }
 
 .about-content{
@@ -213,7 +207,6 @@ p{
 }
 
 .about-content p{
-    font-size: var(--text-font-size);
     margin: 1rem 0;
 }
 
@@ -244,7 +237,7 @@ p{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
+    min-height: 80vh;
 }
 
 .skills-container{
@@ -292,7 +285,7 @@ p{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    margin: 3rem 15% 0;
+    margin: 3rem 15% 4rem 15%;
     gap: 2rem;
 }
 
@@ -327,13 +320,14 @@ p{
 .projects-card-img .layer{
     display: flex;
     align-items: center;
+    justify-content: center;
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
     height: 100%;
     padding: 1.5rem;
-    text-align: center;
+    color: var(--bg-color);
     background: linear-gradient(rgba(0,0,0,.1), var(--main-color));
     transform: translateY(100%);
     transition: .3s;
@@ -343,10 +337,6 @@ p{
 
 .projects-card-img:hover .layer{
     transform: translateY(0);
-}
-
-.layer p{
-    color: var(--bg-color);
 }
 
 .projects-card h3{
@@ -384,3 +374,39 @@ p{
     background-color: var(--main-color);
 }
 
+.contact{                               /*contact section*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: ;
+    background-color: var(--second-bg-color);
+}
+
+.contact h2{
+    margin: 2rem;
+}
+
+.contact-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 8rem;
+}
+
+.contact-label{
+    display: flex;
+    padding: 1rem 2rem 1rem 1rem;
+    border-radius: 10rem;
+    background-color: var(--bg-color);
+}
+
+.contact-label i{
+    font-size: 2.6rem;
+    padding-right: 1rem;
+}
+
+.contact-label:hover{
+    cursor: pointer;
+}
