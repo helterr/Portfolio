@@ -94,7 +94,7 @@ p{
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background-image: url(/assets/images/bg.png);
+    background-image: url(assets/images/bg.png);
     background-size: cover;
     background-position: top;   
 }
