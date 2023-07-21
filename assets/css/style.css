@@ -30,7 +30,6 @@ h3{
 
 p , a{
     font-size: 1.6rem;
-    color: var(--text-color);
 }
 
 html{
@@ -50,7 +49,7 @@ body{
     top: 0;
     left: 0;
     width: 100%;
-    padding: 2rem 15%;
+    height: 8rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -188,7 +187,8 @@ body{
 .about-content{
     display: flex;
     align-items: center;
-    margin: 6% 15% 0;
+    max-width: 1080px;
+    margin-inline: 10%;
     gap: 5rem;
 }
 
@@ -213,6 +213,7 @@ body{
 .about-img{
     display: flex;
     height: 300px;
+    width: 300px;
     border-radius: 50%;
     border: .3rem solid var(--main-color);
     transition: .3s;
@@ -246,7 +247,7 @@ body{
     justify-content: center;
     align-items: center;
     width: 100%;
-    padding: 5rem 15%;
+    padding: 5rem 9%;
     margin-top: 3rem;
     gap: 4rem;
     background-color: var(--second-bg-color);
@@ -285,7 +286,8 @@ body{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    margin: 3rem 15% 4rem 15%;
+    max-width: 1080px;
+    margin: 3rem 9%;
     gap: 2rem;
 }
 
@@ -398,7 +400,9 @@ body{
     display: flex;
     padding: 1rem 2rem 1rem 1rem;
     border-radius: 10rem;
+    color: var(--text-color);
     background-color: var(--bg-color);
+    transition: .3s;
 }
 
 .contact-label i{
@@ -407,5 +411,16 @@ body{
 }
 
 .contact-label:hover{
+    color: var(--main-color);
     cursor: pointer;
+}
+
+
+@media (max-width: 750px){
+    .about-content{
+        flex-direction: column;
+    }
+    .about-img{
+        overflow: auto;
+    }
 }
