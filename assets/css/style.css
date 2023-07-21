@@ -379,7 +379,6 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: ;
     background-color: var(--second-bg-color);
 }
 
