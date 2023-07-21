@@ -179,6 +179,7 @@ body{
 
 .about{                                  /*about section*/
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     min-height: 90vh;
@@ -187,8 +188,9 @@ body{
 .about-content{
     display: flex;
     align-items: center;
+    width: 100%;
     max-width: 1080px;
-    margin-inline: 10%;
+    margin: 0 9%;
     gap: 5rem;
 }
 
