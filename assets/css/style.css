@@ -148,29 +148,9 @@ body{
     color: var(--main-color);
 }
 
-.home-social{
-    position: absolute;
-    bottom: 4rem;
-    width: 170px;
-    display: flex;
-    justify-content: space-between;
-    display: none;
-}
 
-.home-social a{
-    position: relative;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-    background: transparent;
-    border: .2rem solid var(--main-color);
-    border-radius: 50%;
-    font-size: 2.5rem;
-    color: var(--main-color);
-    transition: .3s;
-}
+
+
 
 .home-social a:hover{
     background-color: var(--main-color);
@@ -235,6 +215,32 @@ body{
     margin: 0;
 }
 
+.about-container .btn-box{
+    display: none;
+}
+
+.home-social{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 10%;
+    display: none;
+}
+
+.home-social a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: .2rem solid var(--main-color);
+    border-radius: 50%;
+    font-size: 2.5rem;
+    color: var(--main-color);
+    transition: .3s;
+}
+
 .skills{                                 /*skills section*/
     display: flex;
     flex-direction: column;
@@ -251,7 +257,7 @@ body{
     width: 100%;
     padding: 5rem 9%;
     margin-top: 3rem;
-    gap: 4rem;
+    gap: 3rem;
     background-color: var(--second-bg-color);
 }
 
@@ -425,4 +431,8 @@ body{
     .about-img{
         overflow: auto;
     }
+}
+
+@media (max-width: 500px){
+
 }
