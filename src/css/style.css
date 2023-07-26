@@ -16,6 +16,18 @@
     --main-color: rgb(24, 179, 190);
 }
 
+html{
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+}
+
+body{
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
 h1{
     font-size: 5.6rem;
 }
@@ -30,18 +42,6 @@ h3{
 
 p , a{
     font-size: 1.6rem;
-}
-
-html{
-    scroll-behavior: smooth;
-    font-size: 62.5%;
-}
-
-body{
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    font-family: 'Poppins', sans-serif;
-    overflow-x: hidden;
 }
 
 .header{                                     /*navbar*/
