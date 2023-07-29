@@ -1,0 +1,1 @@
+navlink = document.querySelector("")
