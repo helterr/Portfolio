@@ -60,6 +60,53 @@ p, a { font-size: 1.6rem; }
     color: var(--main-color);
 }
 
+.toggle-input {
+    display: none;
+}
+
+.toggle-btn {
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.toggle-input:checked + .toggle-btn{
+    background-color: #222;
+}
+
+.toggle-input:checked + .toggle-btn::before {
+    content: '';
+    display: block;
+    width: 14px;
+    height: 14px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: relative;
+    top: 3px;
+    transition: transform 0.3s;
+}
+
+.toggle-input + .toggle-btn::before {
+    content: '';
+    display: block;
+    width: 14px;
+    height: 14px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: relative;
+    top: 3px;
+    left: 23px;
+    transition: transform 0.3s;
+}
+
+.toggle-input:checked + .toggle-btn::before {
+    transform: translateX(-20px);
+}
+
 #bx-menu {
     font-size: 3rem;
     color: var(--text-color);
@@ -143,6 +190,7 @@ p, a { font-size: 1.6rem; }
 
 .about-content {
     display: flex;
+    flex-direction: row-reverse;
     align-items: center;
     max-width: 1080px;
     margin: 0 9%;
@@ -157,9 +205,12 @@ p, a { font-size: 1.6rem; }
     line-height: 5rem;
 }
 
-.about-content p .about-info p {
+.about-content p {
     margin: 1rem 0;
-    font-size: 2.5rem;
+}
+
+.about-info p {
+    font-size: 2rem;
 }
 
 .about-img {
@@ -191,10 +242,8 @@ p, a { font-size: 1.6rem; }
 
 .home-social{
     display: flex;
-    justify-content: center;
     width: 100%;
-    gap: 10%;
-    display: none;
+    gap: 2rem;
 }
 
 .home-social a{
@@ -351,9 +400,20 @@ p, a { font-size: 1.6rem; }
 
 .langs-used {
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
     margin-bottom: 2rem;
-    justify-content: space-around;
+    gap: 1rem;
+}
+
+.lang-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 .5rem;
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    font-size: 1.6rem;
 }
 
 .langs-used p {
@@ -417,15 +477,21 @@ p, a { font-size: 1.6rem; }
 }
 
 
-@media (max-width: 750px){
-    .about-content{
-        flex-direction: column;
+@media (max-width: 750px) {
+    .about-content {
+        flex-direction: column-reverse;
     }
-    .about-img{
+    .about-container {
+        text-align: center;
+    }
+    .home-social {
+        justify-content: center;
+    }
+    .about-img {
         overflow: auto;
     }
 }
 
-@media (max-width: 500px){
+@media (max-width: 500px) {
 
 }
