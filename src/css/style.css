@@ -30,6 +30,7 @@ body{
 
 h1{
     font-size: 5.6rem;
+    font-weight: 600;
 }
 
 h2{
@@ -192,6 +193,11 @@ p , a{
     margin: 1rem 0;
 }
 
+.about-info p{
+    font-size: 2.5rem;
+}
+
+
 .about-img{
     display: flex;
     height: 300px;
@@ -243,25 +249,40 @@ p , a{
 
 .skills{                                 /*skills section*/
     display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.skills .container{
+    display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    min-height: 80vh;
+    width: 100%;
+    max-width: 1080px;
+    margin: 0 9%;
 }
 
-.skills-container{
+.skills-title{
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    padding: 5rem 9%;
-    margin-top: 3rem;
-    gap: 3rem;
-    background-color: var(--second-bg-color);
+    height: fit-content;
+    gap: 2rem;
 }
 
-.skills-box{
+.skills-title img{
+    height: 5rem;
+    padding-bottom: .4rem;
+}
+
+.skills-box-container{
+    display: flex;
+    padding-block: 3rem;
+    gap: 3rem;
+}
+
+.skills-box-container div{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -269,16 +290,42 @@ p , a{
     min-width: 10rem;
     min-height: 10rem;
     border-radius: 1rem;
-    background-color: var(--bg-color);
+    background-color: var(--second-bg-color);
 }
 
-.skills-box i{
+.skills-box-container i{
     font-size: 6rem;
     transition: .3s;
 }
 
-.skills-box:hover i{
-    font-size: 7.5rem;
+.skills-box:hover .bxl-html5{
+    transform: scale(1.2);
+    color: #F16529;
+}
+
+.skills-box:hover .bxl-css3{
+    transform: scale(1.2);
+    color: #2965f1;
+}
+
+.skills-box:hover .bxl-javascript{
+    transform: scale(1.2);
+    color: #F0DB4F;
+}
+
+.skills-box:hover .bxl-typescript{
+    transform: scale(1.2);
+    color: #3178C6;
+}
+
+.skills-box:hover .bxl-sass{
+    transform: scale(1.2);
+    color: #CD6799;
+}
+
+.skills-box:hover .bxl-react{
+    transform: scale(1.2);
+    color: #61dbfb;
 }
 
 .projects{                               /*projects section*/
