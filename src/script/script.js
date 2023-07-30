@@ -31,7 +31,7 @@ function toggleDarkMode() {
     // Seleciona o elemento <body>
     const body = document.getElementById('body');
 
-    // Adiciona ou remove a classe 'dark-mode' no elemento <html>
+    // Adiciona ou remove a classe 'dark-mode' no elemento <body>
     body.classList.toggle('dark-mode'); 
 }
 

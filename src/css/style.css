@@ -46,27 +46,29 @@ p, a { font-size: 1.6rem; }
     top: 0;
     left: 0;
     width: 100%;
-    height: 8rem;
+    height: 10rem;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 10;
-    background-color: var(--second-bg-color);
 }
 
-.header .container {
+.navbar {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    max-width: 1080px;
+    padding-inline: 2rem;
+    height: 7rem;
     margin-inline: 9%;
+    border-radius: 7rem;
+    background: rgba(231, 231, 231, 0.7);
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.20);
+    backdrop-filter: blur(5px);
 }
 
 .navbar a {
     color: var(--text-color);
-    font-size: 1.7rem;
-    margin-left: 4rem;
+    margin-inline: 2rem;
     padding: .5rem;
     transition: .3s;
 }
@@ -76,7 +78,7 @@ p, a { font-size: 1.6rem; }
     color: var(--main-color);
 }
 
-.toggle-input {
+.toggle-input {                         /*toggle dark mode*/
     display: none;
 }
 
@@ -86,14 +88,15 @@ p, a { font-size: 1.6rem; }
     display: inline-block;
     width: 40px;
     height: 20px;
-    background-color: #ccc;
+    background-color: var(--second-bg-color);
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.20);
     border-radius: 20px;
     cursor: pointer;
     transition: 0.3s;
 }
 
 .toggle-input:checked + .toggle-btn{
-    background-color: #222;
+    background-color: var(--second-bg-color);
 }
 
 .toggle-input:checked + .toggle-btn::before {
@@ -254,11 +257,11 @@ p, a { font-size: 1.6rem; }
     margin: 0;
 }
 
-.about-container .btn-box{
+.about-container .btn-box {
     display: none;
 }
 
-.home-social{
+.home-social {
     display: flex;
     width: 100%;
     gap: 2rem;
@@ -307,6 +310,7 @@ p, a { font-size: 1.6rem; }
 
 .skills-box-container {
     display: flex;
+    flex-wrap: wrap;
     padding-block: 3rem;
     gap: 3rem;
 }
@@ -398,13 +402,11 @@ p, a { font-size: 1.6rem; }
     width: 100%;
     height: 100%;
     padding: 1.5rem;
-    color: var(--bg-color);
+    color: #fff;
     background: linear-gradient(rgba(0,0,0,.1), var(--main-color));
     transform: translateY(100%);
     transition: .3s;
 }
-
-
 
 .projects-card-img:hover .layer {
     transform: translateY(0);
@@ -494,8 +496,13 @@ p, a { font-size: 1.6rem; }
     cursor: pointer;
 }
 
+@media (max-width: 1024px) {
+    .navbar a {
+        margin-inline: 1rem;
+    }
+}
 
-@media (max-width: 750px) {
+@media (max-width: 768px) {
     .about-content {
         flex-direction: column-reverse;
     }
@@ -508,8 +515,12 @@ p, a { font-size: 1.6rem; }
     .about-img {
         overflow: auto;
     }
+    .skills .container, .skills-box-container{
+        text-align: center;
+        justify-content:  center;
+    }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 425px) {
 
 }
