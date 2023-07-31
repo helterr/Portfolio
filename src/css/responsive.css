@@ -1,0 +1,25 @@
+
+@media (max-width: 1024px) {
+    .navbar a {
+        margin-inline: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column-reverse;
+    }
+    .about-container {
+        text-align: center;
+    }
+    .home-social {
+        justify-content: center;
+    }
+    .about-img {
+        overflow: auto;
+    }
+    .skills .container, .skills-box-container{
+        text-align: center;
+        justify-content:  center;
+    }
+}
