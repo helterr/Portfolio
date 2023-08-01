@@ -6,6 +6,20 @@
 }
 
 @media (max-width: 768px) {
+    h1 { font-size: 5rem; font-weight: 600; }
+    h2 { font-size: 3rem; font-weight: 600; }
+    h3 { font-size: 2.5rem; }
+
+    p, a { font-size: 1.6rem; }
+    .navbar {
+        display: none;
+    }
+    .toggle-btn {
+        display: none;
+    }
+    .mobile-navbar {
+        display: flex;
+    }
     .about-content {
         flex-direction: column-reverse;
     }

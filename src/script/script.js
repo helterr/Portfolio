@@ -23,6 +23,15 @@ window.onscroll = () => {
     });
 };
 
+let menu = document.querySelector("#bx-menu")
+let listMenu = document.querySelectorAll(".navbar-icon")
+
+menu.onclick = () => {
+    listMenu.forEach(item => {
+        item.classList.toggle("open")
+    })
+}
+
 //dark mode
 
 // Função para alternar o modo dark em todo o documento
